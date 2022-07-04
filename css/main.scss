@@ -7,6 +7,7 @@ $main-bg: #edfbff;
 $heading-font: "Poppins", sans-serif;
 $body-font: "Open Sans", sans-serif;
 $cta-font-weight: 700;
+$card-shadow: 0.1875em 0.1875em 0.5625em rgba(0, 0, 0, 0.15);
 
 :root {
   font-size: 100%;
@@ -74,12 +75,12 @@ button {
       border: none;
       color: $dark;
       border-radius: 2em;
-      font-size: clamp(0.625rem, 2vw, 0.875em);
-      // padding: clamp(0.5em 2.25em, 2vw 7vw, 1em 4.75em);
-      padding-top: clamp(0.5em, 1.25vw, 1em);
-      padding-bottom: clamp(0.5em, 1.25vw, 1em);
-      padding-left: clamp(2.25em, 4vw, 4.75em);
-      padding-right: clamp(2.25em, 4vw, 4.75em);
+      font-size: clamp(0.625rem, 2vw, 0.875rem);
+      padding: 0.5em 2.25em;
+      padding-top: clamp(0.4em, 1.25vw, 0.785em);
+      padding-bottom: clamp(0.4em, 1.25vw, 0.785em);
+      padding-left: clamp(2.5em, 4vw, 4.5em);
+      padding-right: clamp(2.5em, 4vw, 4.5em);
       margin-right: clamp(1em, 6vw, 5em);
       filter: drop-shadow(0 0.25em 0.25em rgba(0, 0, 0, 0.25));
     }
@@ -107,14 +108,17 @@ button {
       background-color: $button;
       color: white;
       border: none;
-      font-size: clamp(0.75rem, 2.5vw, 0.875em);
-      // padding: 0.875em 3.75em;
-      // padding: 1.375em 5.125em;
-      padding-top: clamp(0.875em, 1.75vw, 3.75em);
-      padding-bottom: clamp(0.875em, 1.75vw, 3.75em);
-      padding-left: clamp(1.375em, 4.5vw, 5.125em);
-      padding-right: clamp(1.375em, 4vw, 5.125em);
+      font-size: clamp(0.75rem, 2.5vw, 0.875rem);
+      padding-top: clamp(0.833em, 1.75vw, 1.285em);
+      padding-bottom: clamp(0.833em, 1.75vw, 1.285em);
+      padding-left: 5em;
+      padding-right: 5em;
       border-radius: 4em;
+      box-shadow: 0.15em 0.25em 0.5em hsla(322, 100%, 66%, 35%);
+    }
+
+    .start__button:hover {
+      background-color: $button-hover;
     }
 
     .start__image {
@@ -124,17 +128,13 @@ button {
   }
 }
 
-// padding-top: 3.6875em
-// padding-bottom: 14.25em
-// sides: 2.5em
-
 .section.cards {
-  padding: 3.6875em 1em 14.25em 1em;
+  padding: 3.6875em 1em 7.5em 1em;
 
   .card {
     border-radius: 1em;
     padding: 1.5em 2.5em 2em 2.5em;
-    box-shadow: 0.1875em 0.1875em 0.5625em rgba(0, 0, 0, 0.0954);
+    box-shadow: $card-shadow;
     margin-bottom: 2.5em;
 
     img {
@@ -147,21 +147,136 @@ button {
       margin-bottom: 1em;
     }
 
-    .card__text {
+    .card__paragraph {
       font-size: 0.875rem;
       color: $paragraph;
     }
   }
 }
 
+.bg-half {
+  background-image: linear-gradient(180deg, white, white 50%, $dark 0);
+}
+
+.section.cta {
+  border-radius: 1em;
+  background-color: white;
+  padding: 2.5em 0.75em;
+  margin: 0 0.75em;
+  box-shadow: $card-shadow;
+
+  .cta__title {
+    font-size: clamp(1.125rem, 2.5vw, 2rem);
+    margin-bottom: clamp(1.5em, 3.125vw, 2em);
+  }
+
+  .cta__button {
+    font-size: clamp(0.625rem, 1.75vw, 1.25rem);
+    background-color: $button;
+    color: white;
+    margin: 0 auto;
+    border-radius: 2.5em;
+    border: none;
+    padding: 1.5em 5em;
+    box-shadow: 0 0.25em 0.5em hsla(192, 100%, 9%, 22%);
+  }
+
+  .cta__button:hover {
+    background-color: $button-hover;
+  }
+}
+
 .footer {
   background-color: $dark;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 0 1em;
+  text-align: left;
+
+  .footer__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    img.white-out {
+      filter: brightness(0) invert(1);
+      margin-top: 4.5em;
+      margin-bottom: 1.6875em;
+      height: 2em;
+    }
+
+    .footer__contact__item {
+      display: flex;
+      margin-bottom: 2em;
+      font-size: 0.875rem;
+
+      .footer__icon {
+        height: 1.25em;
+        margin-right: 2em;
+      }
+    }
+  }
+
+  .footer__links {
+    margin-top: 0.8125em;
+    list-style: none;
+    // TODO fix font size, moves with paragraph
+
+    li {
+      margin-bottom: 1.15em;
+      padding: 0.25em 0;
+
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  .footer__social {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 8.5em;
+    align-self: center;
+
+    li {
+      border: 1px solid white;
+      border-radius: 50%;
+      height: 2em;
+      width: 2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      a {
+        height: 0.875em;
+        text-decoration: none;
+        color: white;
+        margin-bottom: 0.5em;
+      }
+    }
+  }
+
+  .footer__copyright {
+    text-align: center;
+    margin-top: 1.5em;
+    margin-bottom: 2.875em;
+    font-size: 0.7rem;
+  }
 }
 
 @media (min-width: 965px) {
   .section.start {
     background-image: url("../images/bg-hero-desktop.svg");
     justify-content: space-between;
+
+    header {
+      padding-top: 3.125em;
+    }
+
     .start__main {
       display: flex;
       justify-content: space-between;
@@ -177,11 +292,7 @@ button {
       .start__image {
         width: 55%;
         object-fit: contain;
-        margin-top: 0; //TODO Fix Dimensions
-      }
-
-      .start__button:hover {
-        background-color: $button-hover;
+        margin-top: 0;
       }
     }
   }
@@ -191,10 +302,49 @@ button {
   .section.cards {
     .card {
       display: flex;
+      align-items: center;
 
       img {
         width: 35%;
       }
+
+      .card__text {
+        text-align: left;
+
+        .card__title {
+          font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+        }
+
+        .card__paragraph {
+          font-size: clamp(0.875rem, 1.75vw, 1.125rem);
+        }
+      }
     }
+
+    .card.text--left {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      padding-left: 10%;
+      padding-right: 1.5%;
+
+      .card__text {
+        margin-right: 15%;
+      }
+    }
+
+    .card.text--right {
+      justify-content: space-between;
+      padding-left: 1.5%;
+      padding-right: 10%;
+
+      .card__text {
+        margin-left: 15%;
+      }
+    }
+  }
+
+  .section.cta {
+    width: 55%;
+    margin: 0 auto;
   }
 }
