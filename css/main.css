@@ -254,6 +254,7 @@ button {
   }
   .section.cards .card img {
     width: 35%;
+    height: auto;
   }
   .section.cards .card .card__text {
     text-align: left;
