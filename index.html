@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png" />
     <!-- FontAwesome -->
     <script
       src="https://kit.fontawesome.com/c80129e9d7.js"
@@ -25,7 +27,13 @@
     <div class="section start">
       <header>
         <img src="images/logo.svg" alt="Huddle Logo" />
-        <button class="header__cta">Try It Free</button>
+        <button
+          class="header__cta"
+          href="https://github.com/superschooler"
+          target="_blank"
+        >
+          Try It Free
+        </button>
       </header>
       <div class="start__main">
         <div class="start__main__text">
@@ -101,17 +109,20 @@
     </div>
     <!-- Footer -->
     <footer class="footer">
+      <img src="images/logo.svg" alt="Huddle Logo" class="footer__logo" />
       <div class="footer__contact">
-        <img src="images/logo.svg" alt="Huddle Logo" class="white-out" />
         <div class="footer__contact__item">
           <img
             src="images/icon-location.svg"
             alt="Location Icon"
             class="footer__icon"
           />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua
+          <p class="footer__text">
+            <a href="https://goo.gl/maps/4KjPFL3UwatHqDiL7" target="_blank">
+              123 Main Street
+              <br />
+              Phoenix, AZ, 85001
+            </a>
           </p>
         </div>
         <div class="footer__contact__item">
@@ -120,7 +131,9 @@
             alt="Phone Icon"
             class="footer__icon"
           />
-          <p>+1-543-123-4567</p>
+          <p class="footer__text">
+            <a href="tel:+15431234567">+1-543-123-4567</a>
+          </p>
         </div>
         <div class="footer__contact__item">
           <img
@@ -128,31 +141,61 @@
             alt="Email Icon"
             class="footer__icon"
           />
-          <p>example@fylo.com</p>
+          <p class="footer__text">
+            <a href="mailto:brian@brianschooler.com" target="_blank"
+              >brian@brianschooler.com</a
+            >
+          </p>
         </div>
       </div>
       <ul class="footer__links">
-        <li><a href="">About Us</a></li>
-        <li><a href="">What We Do</a></li>
-        <li><a href="">FAQ</a></li>
-        <li><a href="">Career</a></li>
-        <li><a href="">Blog</a></li>
-        <li><a href="">Contact Us</a></li>
+        <li>
+          <a href="https://github.com/superschooler" target="_blank"
+            >About Us</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/superschooler" target="_blank"
+            >What We Do</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/superschooler" target="_blank">FAQ</a>
+        </li>
+        <li>
+          <a href="https://github.com/superschooler" target="_blank">Career</a>
+        </li>
+        <li>
+          <a href="https://github.com/superschooler" target="_blank">Blog</a>
+        </li>
+        <li>
+          <a href="https://github.com/superschooler" target="_blank"
+            >Contact Us</a
+          >
+        </li>
       </ul>
-      <ul class="footer__social">
-        <li>
-          <a href=""><i class="fa fa-facebook"></i></a>
-        </li>
-        <li>
-          <a href=""><i class="fa fa-twitter"></i></a>
-        </li>
-        <li>
-          <a href=""><i class="fa fa-instagram"></i></a>
-        </li>
-      </ul>
-      <div class="footer__copyright">
-        <i class="fa-regular fa-copyright"></i> Copyright 2018 Huddle. All
-        rights reserved.
+      <div class="col-4">
+        <ul class="footer__social">
+          <li>
+            <a href="https://www.facebook.com/brian.schooler/" target="_blank"
+              ><i class="fa fa-facebook"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/SuperSchooler" target="_blank"
+              ><i class="fa fa-twitter"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/superschooler/" target="_blank"
+              ><i class="fa fa-instagram"></i
+            ></a>
+          </li>
+        </ul>
+        <div class="footer__copyright">
+          <i class="fa-regular fa-copyright"></i> Copyright 2018 Huddle. All
+          rights reserved.
+        </div>
       </div>
     </footer>
   </body>

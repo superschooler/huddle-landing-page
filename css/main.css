@@ -7,9 +7,7 @@ body {
   text-align: center;
 }
 
-p,
-.footer__copyright,
-.footer__links li {
+p {
   font-size: clamp(0.875rem, 3vw, 1.125rem);
 }
 
@@ -73,6 +71,7 @@ button {
 }
 .section.start header button:hover {
   color: #808e9a;
+  cursor: pointer;
 }
 .section.start .start__main {
   margin-top: 4em;
@@ -100,6 +99,7 @@ button {
 }
 .section.start .start__main .start__button:hover {
   background-color: #ff9adb;
+  cursor: pointer;
 }
 .section.start .start__main .start__image {
   margin-top: 3.5em;
@@ -155,6 +155,7 @@ button {
 }
 .section.cta .cta__button:hover {
   background-color: #ff9adb;
+  cursor: pointer;
 }
 
 .footer {
@@ -165,25 +166,35 @@ button {
   padding: 0 1em;
   text-align: left;
 }
+.footer .footer__logo {
+  filter: brightness(0) invert(1);
+  margin-top: 4.5em;
+  margin-bottom: 2em;
+  height: 2em;
+  width: 14em;
+}
 .footer .footer__contact {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.footer .footer__contact img.white-out {
-  filter: brightness(0) invert(1);
-  margin-top: 4.5em;
-  margin-bottom: 1.6875em;
-  height: 2em;
-}
 .footer .footer__contact .footer__contact__item {
   display: flex;
   margin-bottom: 2em;
-  font-size: 0.875rem;
 }
 .footer .footer__contact .footer__contact__item .footer__icon {
   height: 1.25em;
   margin-right: 2em;
+}
+.footer .footer__contact .footer__contact__item .footer__text {
+  font-size: 0.875rem;
+}
+.footer .footer__contact .footer__contact__item .footer__text a {
+  text-decoration: none;
+  color: white;
+}
+.footer .footer__contact .footer__contact__item .footer__text a:hover {
+  color: hsl(322deg, 100%, 66%);
 }
 .footer .footer__links {
   margin-top: 0.8125em;
@@ -198,12 +209,15 @@ button {
   color: white;
   font-size: 0.875rem;
 }
+.footer .footer__links li a:hover {
+  color: hsl(322deg, 100%, 66%);
+}
 .footer .footer__social {
   display: flex;
   list-style: none;
   justify-content: space-between;
   width: 8.5em;
-  align-self: center;
+  margin: 0 auto;
 }
 .footer .footer__social li {
   border: 1px solid white;
@@ -220,6 +234,12 @@ button {
   color: white;
   margin-bottom: 0.5em;
 }
+.footer .footer__social li:hover {
+  border-color: hsl(322deg, 100%, 66%);
+}
+.footer .footer__social li:hover > * {
+  color: hsl(322deg, 100%, 66%);
+}
 .footer .footer__copyright {
   text-align: center;
   margin-top: 1.5em;
@@ -227,32 +247,6 @@ button {
   font-size: 0.7rem;
 }
 
-@media (min-width: 965px) {
-  .section.start {
-    background-image: url("../images/bg-hero-desktop.svg");
-    justify-content: space-between;
-  }
-  .section.start header {
-    padding-top: 3.125em;
-  }
-  .section.start .start__main {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: left;
-    width: 90%;
-  }
-  .section.start .start__main .start__main__text {
-    width: 42.5%;
-    margin-right: 2.5%;
-  }
-  .section.start .start__main .start__image {
-    width: 55%;
-    -o-object-fit: contain;
-       object-fit: contain;
-    margin-top: 0;
-  }
-}
 @media (min-width: 600px) {
   .section.cards .card {
     display: flex;
@@ -291,5 +285,56 @@ button {
   .section.cta {
     width: 55%;
     margin: 0 auto;
+  }
+}
+@media (min-width: 850px) {
+  .footer {
+    padding: 0 8% 3em 8%;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 0.75fr;
+    -moz-column-gap: 10%;
+         column-gap: 10%;
+    row-gap: 1em;
+  }
+  .footer .footer__logo {
+    grid-column: 1/4;
+    grid-row: 1;
+  }
+  .footer .footer__links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    margin-top: 0;
+  }
+  .footer .col-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 965px) {
+  .section.start {
+    background-image: url("../images/bg-hero-desktop.svg");
+    justify-content: space-between;
+  }
+  .section.start header {
+    padding-top: 3.125em;
+  }
+  .section.start .start__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    width: 90%;
+  }
+  .section.start .start__main .start__main__text {
+    width: 42.5%;
+    margin-right: 2.5%;
+  }
+  .section.start .start__main .start__image {
+    width: 55%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    margin-top: 0;
   }
 }/*# sourceMappingURL=main.css.map */

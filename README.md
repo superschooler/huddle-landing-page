@@ -16,8 +16,6 @@ This is a solution to the [Huddle landing page with alternating feature blocks c
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -29,20 +27,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](./images/screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/superschooler/huddle-landing-page](https://github.com/superschooler/huddle-landing-page)
+- Live Site URL: [https://superschooler.github.io/huddle-landing-page/](https://superschooler.github.io/huddle-landing-page/)
 
 ## My process
 
@@ -53,9 +43,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- [Sass](https://sass-lang.com/)
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 
@@ -67,55 +55,26 @@ I used an abundance of clamps in my CSS to keep the media queries a bit simpler 
 
 Additionally, this was my first time using Sass and I enjoyed it a lot! I didn't use a lot of Sass-specific features, but liked being able to nest CSS styles and have my stylesheet be a lot more specific. I'm sure this would be a tremendous help on a larger website to avoid CSS conflicts.
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+I also used CSS grid for the first time in the footer since I couldn't get everything to line up right with Flexbox. It was challenging getting it to work how I wanted, but isn't so bad now that I've used it and understand how the layout works. I'm sure I'll use it again in future projects where Flexbox isn't the best solution for the layout I'm looking for.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I plan to do a few more small HTML & CSS projects over the next couple of weeks, but have my wedding coming up and don't want to dive too deep in JavaScript only to be out of it for a couple of weeks. In the meantime, I'll keep refining my skills with HTML, CSS, Bootstrap, Sass, and plan to give Tailwind CSS a shot since I've had a couple of people recommend it over Bootstrap. After the wedding it's game on to learn as much as possible and get job ready.
 
 ### Useful resources
 
 - [MDN Docs - Clamp](https://developer.mozilla.org/en-US/docs/Web/CSS/clamp) - This resource helped me set up clamps well on font sizes and padding to make for a perfectly responsive site.
 - [Sass Cheatsheet](https://devhints.io/sass) - This was my first time using Sass and I relied on this cheatsheet a bit to help me remember how to use variables, mainly. I'm sure I'll be relying on this more as I need to get into loops and more complex Sass.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
-
 ## Author
 
 - Website - [Add your name here](https://www.your-site.com)
 - Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Twitter - [@yourusername](https://www.twitter.com/yourusername)- Website - [Brian Schooler](https://www.brianschooler.com)
+- Frontend Mentor - [@superschooler](https://www.frontendmentor.io/profile/superschooler)
+- Twitter - [@superschooler](https://twitter.com/SuperSchooler)
+- GitHub - [@superschooler](https://github.com/superschooler)
 
 ## Acknowledgments
 
 [CodeSTACKr's](https://www.youtube.com/codeSTACKr) YouTube video _[Sass Tutorial for Beginners - CSS With Superpowers](https://www.youtube.com/watch?v=_a5j7KoflTs&t=463s)_ was very helpful in getting me up and running with Sass quickly and without having to install anything on my computer.
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**

@@ -18,9 +18,7 @@ body {
   text-align: center;
 }
 
-p,
-.footer__copyright,
-.footer__links li {
+p {
   font-size: clamp(0.875rem, 3vw, 1.125rem);
 }
 
@@ -87,6 +85,7 @@ button {
 
     button:hover {
       color: $paragraph;
+      cursor: pointer;
     }
   }
 
@@ -119,6 +118,7 @@ button {
 
     .start__button:hover {
       background-color: $button-hover;
+      cursor: pointer;
     }
 
     .start__image {
@@ -183,6 +183,7 @@ button {
 
   .cta__button:hover {
     background-color: $button-hover;
+    cursor: pointer;
   }
 }
 
@@ -194,26 +195,39 @@ button {
   padding: 0 1em;
   text-align: left;
 
+  .footer__logo {
+    filter: brightness(0) invert(1);
+    margin-top: 4.5em;
+    margin-bottom: 2em;
+    height: 2em;
+    width: 14em;
+  }
+
   .footer__contact {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 
-    img.white-out {
-      filter: brightness(0) invert(1);
-      margin-top: 4.5em;
-      margin-bottom: 1.6875em;
-      height: 2em;
-    }
-
     .footer__contact__item {
       display: flex;
       margin-bottom: 2em;
-      font-size: 0.875rem;
 
       .footer__icon {
         height: 1.25em;
         margin-right: 2em;
+      }
+
+      .footer__text {
+        font-size: 0.875rem;
+
+        a {
+          text-decoration: none;
+          color: white;
+        }
+
+        a:hover {
+          color: $button;
+        }
       }
     }
   }
@@ -221,7 +235,6 @@ button {
   .footer__links {
     margin-top: 0.8125em;
     list-style: none;
-    // TODO fix font size, moves with paragraph
 
     li {
       margin-bottom: 1.15em;
@@ -232,6 +245,10 @@ button {
         color: white;
         font-size: 0.875rem;
       }
+
+      a:hover {
+        color: $button;
+      }
     }
   }
 
@@ -240,7 +257,7 @@ button {
     list-style: none;
     justify-content: space-between;
     width: 8.5em;
-    align-self: center;
+    margin: 0 auto;
 
     li {
       border: 1px solid white;
@@ -258,6 +275,14 @@ button {
         margin-bottom: 0.5em;
       }
     }
+
+    li:hover {
+      border-color: $button;
+    }
+
+    li:hover > * {
+      color: $button;
+    }
   }
 
   .footer__copyright {
@@ -265,36 +290,6 @@ button {
     margin-top: 1.5em;
     margin-bottom: 2.875em;
     font-size: 0.7rem;
-  }
-}
-
-@media (min-width: 965px) {
-  .section.start {
-    background-image: url("../images/bg-hero-desktop.svg");
-    justify-content: space-between;
-
-    header {
-      padding-top: 3.125em;
-    }
-
-    .start__main {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      text-align: left;
-      width: 90%;
-
-      .start__main__text {
-        width: 42.5%;
-        margin-right: 2.5%;
-      }
-
-      .start__image {
-        width: 55%;
-        object-fit: contain;
-        margin-top: 0;
-      }
-    }
   }
 }
 
@@ -346,5 +341,63 @@ button {
   .section.cta {
     width: 55%;
     margin: 0 auto;
+  }
+}
+
+@media (min-width: 850px) {
+  .footer {
+    padding: 0 8% 3em 8%;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 0.75fr;
+    column-gap: 10%;
+    row-gap: 1em;
+
+    .footer__logo {
+      grid-column: 1 / 4;
+      grid-row: 1;
+    }
+
+    .footer__links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+      margin-top: 0;
+    }
+
+    .col-4 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media (min-width: 965px) {
+  .section.start {
+    background-image: url("../images/bg-hero-desktop.svg");
+    justify-content: space-between;
+
+    header {
+      padding-top: 3.125em;
+    }
+
+    .start__main {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+      width: 90%;
+
+      .start__main__text {
+        width: 42.5%;
+        margin-right: 2.5%;
+      }
+
+      .start__image {
+        width: 55%;
+        object-fit: contain;
+        margin-top: 0;
+      }
+    }
   }
 }
